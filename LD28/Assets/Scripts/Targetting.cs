@@ -64,16 +64,19 @@ public class Targetting : MonoBehaviour {
 
 	private void SelectTarget()
 	{
-		selectedTarget.renderer.material.color = Color.red;
+		Transform name = selectedTarget.FindChild("Name");
+		if(name == null){
+			Debug.LogError("Could find 'Name' on " + selectedTarget.name);
+			return;
+		}
 
-		PlayerAttack pa = (PlayerAttack)GetComponent("PlayerAttack");
+		name.GetComponent<TextMesh>().text = selectedTarget.GetComponent<Mob>().Name;
+		name.GetComponent<MeshRenderer>().enabled = true;
 
-		pa.target = selectedTarget.gameObject;
 	}
 
 	private void DeselectTarget()
 	{
-		selectedTarget.renderer.material.color = Color.blue;
-		selectedTarget = null;
+		selectedTarget.FindChild("Name").GetComponent<MeshRenderer>().enabled = false;
 	}
 }
