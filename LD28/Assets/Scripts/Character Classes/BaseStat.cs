@@ -12,6 +12,7 @@ public class BaseStat {
 	private int _buffValue;			//Amount of buff to this stat
 	private int _expToLevel;		//Experience needed to get next point of base value
 	private float _levelModifier;	//Modifier applied to exp needed to raise the stat
+	private string _name;
 
 	public BaseStat() {
 		_baseValue     = 0;
@@ -41,6 +42,11 @@ public class BaseStat {
 	public float LevelModifier {
 		get{ return _levelModifier;}
 		set{ _levelModifier = value;}
+	}
+
+	public string Name {
+		get{ return _name;}
+		set{ _name = value;}
 	}
 
 #endregion

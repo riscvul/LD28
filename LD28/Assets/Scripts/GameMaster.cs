@@ -14,11 +14,11 @@ public class GameMaster : MonoBehaviour {
 	private GameObject _pc;
 	private PlayerCharacter _pcScript;
 
-	private Vector3 _playerSpawnPointPos;
+	public Vector3 _playerSpawnPointPos;
 
 	// Use this for initialization
 	void Start () {
-		_playerSpawnPointPos = new Vector3(300, 6, 400);
+		//_playerSpawnPointPos = new Vector3(300, 6, 400);
 		GameObject go = GameObject.Find(GameSettings.PLAYER_SPAWN_POINT);
 		if (go == null) 
 		{

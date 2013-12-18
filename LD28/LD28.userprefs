@@ -1,20 +1,18 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Targetting.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Items\Consumable.cs">
     <Files>
-      <File FileName="Assets\Scripts\EnemyAttack.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Targetting.cs" Line="80" Column="35" />
-      <File FileName="Assets\Scripts\Character Classes\BaseCharacter.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Character Classes\ModifiedStat.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Character Classes\PlayerCharacter.cs" Line="3" Column="3" />
-      <File FileName="Assets\Scripts\Character Classes\CharacterGenerator.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\GameSettings.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Items\Accessory.cs" Line="18" Column="3" />
+      <File FileName="Assets\Scripts\Items\Item.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Items\BuffItem.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Character Classes\Attribute.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\GameMaster.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Character Classes\BaseStat.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\HUD\VitalBar.cs" Line="8" Column="30" />
-      <File FileName="Assets\Scripts\C#MessengerExtended\Messenger.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Mob.cs" Line="10" Column="3" />
+      <File FileName="Assets\Scripts\Items\Weapon.cs" Line="1" Column="1" />
+      <File FileName="Assets\Standard Assets\Character Controllers\Sources\Scripts\ThirdPersonController.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Items\Clothing.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Items\Armor.cs" Line="16" Column="27" />
+      <File FileName="Assets\Scripts\Items\Consumable.cs" Line="42" Column="13" />
+      <File FileName="Assets\Scripts\Character Classes\BaseCharacter.cs" Line="64" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -5,6 +5,8 @@ using System.Collections.Generic;
 public class Targetting : MonoBehaviour {
 	public List<Transform> targets;
 	public Transform selectedTarget;
+	public int curHealth;
+	public int maxHealth;
 
 	private Transform myTransform;
 
@@ -44,22 +46,27 @@ public class Targetting : MonoBehaviour {
 	}
 
 	private void TargetEnemy(){
-		if (selectedTarget == null) {
-			SortTargetsByDistance();
-			selectedTarget = targets[0];
-		}
-		else {
-			int index = targets.IndexOf(selectedTarget);
+		if(targets.Count == 0)
+			AddAllEnemies();
+		if(targets.Count > 0)
+		{
+			if (selectedTarget == null) {
+				SortTargetsByDistance();
+				selectedTarget = targets[0];
+			}
+			else {
+				int index = targets.IndexOf(selectedTarget);
 
-			if(index < targets.Count - 1)
-				index++;
-			else
-				index = 0;
-			DeselectTarget();
-			selectedTarget = targets[index];
+				if(index < targets.Count - 1)
+					index++;
+				else
+					index = 0;
+				DeselectTarget();
+				selectedTarget = targets[index];
 
+			}
+			SelectTarget();
 		}
-		SelectTarget();
 	}
 
 	private void SelectTarget()
@@ -72,11 +79,17 @@ public class Targetting : MonoBehaviour {
 
 		name.GetComponent<TextMesh>().text = selectedTarget.GetComponent<Mob>().Name;
 		name.GetComponent<MeshRenderer>().enabled = true;
+		selectedTarget.GetComponent<Mob>().DisplayHealth();
 
+		Messenger<bool>.Broadcast("ShowMobVitalBars", true);
 	}
 
 	private void DeselectTarget()
 	{
 		selectedTarget.FindChild("Name").GetComponent<MeshRenderer>().enabled = false;
+
+		selectedTarget = null;
+
+		Messenger<bool>.Broadcast("ShowMobVitalBars", false);
 	}
 }

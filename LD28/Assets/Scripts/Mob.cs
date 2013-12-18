@@ -5,14 +5,18 @@ public class Mob : BaseCharacter {
 
 	// Use this for initialization
 	void Start () {
-		GetPrimaryAttribute((int)AttributeName.Constitution).BaseValue = 100;
-		GetVital((int)VitalName.Health).Update();
 
 		Name = "Slug";
+		GetPrimaryAttribute((int)AttributeName.Constitution).BaseValue = 100;
+		GetVital((int)VitalName.Health).Update();
 	}
 	
 	// Update is called once per frame
 	void Update () {
+
+	}
+
+	public void DisplayHealth() {
 		Messenger<int, int>.Broadcast("MobHealthUpdate", 80, 100);
 	}
 }
